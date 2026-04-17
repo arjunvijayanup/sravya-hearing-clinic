@@ -57,7 +57,7 @@ const HomePage = () => {
   }];
   const features = [{
     icon: Award,
-    title: '25+ years of experience',
+    title: '30+ years of experience',
     description: 'Trusted expertise since 1995'
   }, {
     icon: Users,
