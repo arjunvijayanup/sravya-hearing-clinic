@@ -71,7 +71,7 @@ const Header = ({ onBookAppointment }) => {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+          <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0 ml-8">
             <Button
               onClick={onBookAppointment}
               className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 active:scale-[0.98] hidden sm:flex"
