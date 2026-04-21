@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Phone, MapPin, MessageCircle, Ear, Stethoscope, MessageSquare, Heart, Users, Award, Shield, DollarSign, Star, StarHalf, ExternalLink } from 'lucide-react';
+import { Phone, MapPin, MessageCircle, Ear, Stethoscope, MessageSquare, Heart, Users, Award, Shield, DollarSign, Star, StarHalf, ExternalLink, Brain, Activity, BookOpen, Smile } from 'lucide-react';
 import { toast } from 'sonner';
 import ServiceCard from '@/components/ServiceCard.jsx';
 import TestimonialCard from '@/components/TestimonialCard.jsx';
@@ -54,6 +54,22 @@ const HomePage = () => {
     icon: Users,
     title: 'Counseling & rehabilitation',
     description: 'Support and rehabilitation for better quality of life'
+  }, {
+    icon: Brain,
+    title: 'Counseling (Adult/Children)',
+    description: 'Personalized counseling for emotional and developmental needs'
+  }, {
+    icon: Activity,
+    title: 'Behavior therapy',
+    description: 'Behavior modification techniques to support positive development'
+  }, {
+    icon: BookOpen,
+    title: 'Training for learning disabled',
+    description: 'Specialized programs to support individuals with learning disabilities'
+  }, {
+    icon: Smile,
+    title: 'Play & group therapy',
+    description: 'Interactive sessions to build social and communication skills'
   }];
   const features = [{
     icon: Award,
@@ -203,12 +219,8 @@ const HomePage = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              {services.slice(0, 2).map((service, index) => <ServiceCard key={index} {...service} index={index} />)}
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              {services.slice(2, 5).map((service, index) => <ServiceCard key={index + 2} {...service} index={index + 2} />)}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {services.map((service, index) => <ServiceCard key={index} {...service} index={index} />)}
             </div>
           </div>
         </section>

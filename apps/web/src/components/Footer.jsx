@@ -67,7 +67,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-medium">Kodungallore Clinic</p>
-                  <p className="text-sm text-secondary-foreground/80 mb-1">Kodungallore, Thrissur</p>
+                  <p className="text-sm text-secondary-foreground/80 mb-1">Thiruvanchikulam, Kodungallore, Thrissur, Kerala 680664</p>
                   <a href="tel:+918848320580" className="text-sm text-primary hover:underline">+91 88483 20580</a>
                 </div>
               </div>
