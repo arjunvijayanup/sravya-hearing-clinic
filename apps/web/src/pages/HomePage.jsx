@@ -189,7 +189,7 @@ const HomePage = () => {
             }} transition={{
               duration: 0.6
             }} className="relative">
-                <img src="/images/clinic-interior.png" alt="Modern clinic interior with professional equipment" className="rounded-2xl shadow-soft-lg w-full h-auto" />
+                <img src="https://www.sravyaclinic.com/images/clinic-interior.png" alt="Modern clinic interior with professional equipment" className="rounded-2xl shadow-soft-lg w-full h-auto" />
               </motion.div>
             </div>
           </div>
