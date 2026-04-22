@@ -53,7 +53,7 @@ const Header = ({ onBookAppointment }) => {
               alt="Sravya Speech & Hearing Clinic"
               className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl object-cover flex-shrink-0"
             />
-            <span className="font-semibold text-sm sm:text-base lg:text-lg text-foreground leading-tight header-clinic-name">
+            <span className={`font-semibold text-sm sm:text-base lg:text-lg leading-tight header-clinic-name transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-white'}`}>
               Sravya Speech & Hearing Clinic
             </span>
           </a>
@@ -64,7 +64,7 @@ const Header = ({ onBookAppointment }) => {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
+                className={`text-sm font-medium hover:text-primary transition-colors duration-300 ${isScrolled ? 'text-foreground/80' : 'text-white/90'}`}
               >
                 {item.label}
               </a>
@@ -81,7 +81,7 @@ const Header = ({ onBookAppointment }) => {
 
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild className="lg:hidden">
-                <Button variant="ghost" size="icon" className="flex-shrink-0">
+                <Button variant="ghost" size="icon" className={`flex-shrink-0 transition-colors duration-300 ${!isScrolled ? 'text-white hover:text-white hover:bg-white/10' : ''}`}>
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
