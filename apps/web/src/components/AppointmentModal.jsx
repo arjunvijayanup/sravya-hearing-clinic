@@ -35,7 +35,7 @@ const AppointmentModal = ({ open, onOpenChange }) => {
     ];
     if (data.message) lines.push(`Message: ${data.message}`);
 
-    window.open(`https://wa.me/918304885579?text=${encodeURIComponent(lines.join('\n'))}`, '_blank');
+    window.open(`https://wa.me/918848320580?text=${encodeURIComponent(lines.join('\n'))}`, '_blank');
     reset();
     onOpenChange(false);
   };

@@ -19,7 +19,7 @@ const HomePage = () => {
     phone: '+91 88483 20580',
     whatsapp: '918848320580',
     embedUrl: 'https://maps.google.com/maps?q=10.395702729757742,76.1173561576197&output=embed&z=15',
-    googleMapsUrl: 'https://maps.app.goo.gl/cNVoijXZDoNjGL618'
+    googleMapsUrl: 'https://maps.app.goo.gl/phSzAi6JFWJEJUa66'
   }, {
     id: 'kodungallore',
     name: 'Kodungallore Clinic',
@@ -35,7 +35,7 @@ const HomePage = () => {
     phone: '+91 88483 20580',
     whatsapp: '918848320580',
     embedUrl: 'https://maps.google.com/maps?q=10.52,76.21&output=embed&z=15',
-    googleMapsUrl: 'https://maps.google.com/?q=10.52,76.21'
+    googleMapsUrl: 'https://maps.app.goo.gl/VzikqmCAxQAiAr2M6'
   }];
   const services = [{
     icon: Ear,
@@ -161,13 +161,17 @@ const HomePage = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   Established in 1995. SRAVYA SPEECH AND HEARING CLINIC has been serving families with compassionate, patient-first care for over 30 years.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-4 font-medium text-foreground/90">
-                  OUR MOTTO — AFFORDABLE CARE, UNCOMPROMISED QUALITY
-                </p>
+                <div className="mb-6">
+                  <p className="text-xl font-bold italic text-red-600 leading-relaxed" style={{ fontFamily: 'Georgia, serif' }}>
+                    <span className="text-4xl leading-none text-red-400/50 select-none align-bottom" style={{ fontFamily: 'Georgia, serif' }}>"</span>
+                    AFFORDABLE CARE, UNCOMPROMISED QUALITY
+                    <span className="text-4xl leading-none text-red-400/50 select-none align-bottom" style={{ fontFamily: 'Georgia, serif' }}>"</span>
+                  </p>
+                </div>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                   SRAVYA SPEECH AND HEARING CLINIC operates across 3 convenient locations in Thrissur district:
                 </p>
-                <ul className="text-lg text-muted-foreground leading-relaxed mb-6 space-y-1">
+                <ul className="text-lg leading-relaxed mb-6 space-y-1 font-semibold text-foreground">
                   <li>• VALAPAD (Kothakulam)</li>
                   <li>• KODUNGALLORE (Thiruvanchikulam)</li>
                   <li>• THRISSUR (East Fort)</li>
