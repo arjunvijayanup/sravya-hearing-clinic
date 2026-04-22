@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const ServiceCard = ({ icon: Icon, title, description, index }) => {
+const ServiceCard = ({ icon: Icon, title, description, items, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -14,7 +14,17 @@ const ServiceCard = ({ icon: Icon, title, description, index }) => {
         <Icon className="w-7 h-7 text-primary" />
       </div>
       <h3 className="text-xl font-semibold mb-3 text-foreground">{title}</h3>
-      <p className="text-muted-foreground leading-relaxed">{description}</p>
+      {description && <p className="text-muted-foreground leading-relaxed mb-2">{description}</p>}
+      {items && (
+        <ul className="text-muted-foreground space-y-1.5">
+          {items.map((item, i) => (
+            <li key={i} className="flex items-start gap-2">
+              <span className="text-primary font-bold leading-relaxed">•</span>
+              <span className="leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </motion.div>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Phone, MapPin, MessageCircle, Ear, Stethoscope, MessageSquare, Heart, Users, Award, Shield, DollarSign, Star, StarHalf, ExternalLink, Brain, Activity, BookOpen, Smile } from 'lucide-react';
+import { Phone, MapPin, MessageCircle, Ear, Stethoscope, MessageSquare, Heart, Users, Award, Shield, DollarSign, Star, StarHalf, ExternalLink, Brain, Activity, BookOpen, Headphones } from 'lucide-react';
 import { toast } from 'sonner';
 import ServiceCard from '@/components/ServiceCard.jsx';
 import TestimonialCard from '@/components/TestimonialCard.jsx';
@@ -36,40 +36,25 @@ const HomePage = () => {
   }];
   const services = [{
     icon: Ear,
-    title: 'Hearing tests (Audiometry)',
-    description: 'Comprehensive hearing assessments using advanced diagnostic equipment'
-  }, {
-    icon: Stethoscope,
-    title: 'Hearing aid fitting & sales',
-    description: 'Premium hearing aids tailored to your needs'
+    title: 'Department of Audiology',
+    items: ['Audiometry', 'Tympanometry']
   }, {
     icon: MessageSquare,
-    title: 'Speech therapy (Children & Adults)',
-    description: 'Personalized speech and language therapy programs'
+    title: 'Department of Speech Pathology (Children & Adults)',
+    items: ['Therapy for speech disorders', 'Language development therapy', 'Voice disorder treatment']
   }, {
-    icon: Heart,
-    title: 'Hearing loss management',
-    description: 'Expert guidance for managing hearing loss'
-  }, {
-    icon: Users,
-    title: 'Counseling & rehabilitation',
-    description: 'Support and rehabilitation for better quality of life'
+    icon: Headphones,
+    title: 'Hearing Loss Management',
+    items: ['Hearing aid selection (Digital & Analogue)', 'Fitting and maintenance', 'Patient counseling']
   }, {
     icon: Brain,
-    title: 'Counseling (Adult/Children)',
-    description: 'Personalized counseling for emotional and developmental needs'
-  }, {
-    icon: Activity,
-    title: 'Behavior therapy',
-    description: 'Behavior modification techniques to support positive development'
+    title: 'Department of Clinical Psychology',
+    items: ['Psychotherapy', 'Support for emotional and behavioral challenges', 'Learning Disabilities', 'Autism Spectrum Disorder', 'ADHD (Attention Deficit Hyperactivity Disorder)', 'Applied Behaviour Analysis (ABA)', 'Behaviour Therapy', 'Art Therapy', 'Play Therapy', 'Group Therapy']
   }, {
     icon: BookOpen,
-    title: 'Training for learning disabled',
-    description: 'Specialized programs to support individuals with learning disabilities'
-  }, {
-    icon: Smile,
-    title: 'Play & group therapy',
-    description: 'Interactive sessions to build social and communication skills'
+    title: 'Department of Special Education',
+    description: 'Support for children with:',
+    items: ['Reading difficulties', 'Writing challenges', 'Calculation issues']
   }];
   const features = [{
     icon: Award,
@@ -171,13 +156,21 @@ const HomePage = () => {
                   Trusted care across Thrissur district
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Established in 1995, Sravya Speech & Hearing Clinic has been serving families with compassionate, patient-first care for over 25 years.
+                  Established in 1995. SRAVYA SPEECH AND HEARING CLINIC has been serving families with compassionate, patient-first care for over 30 years.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6 font-medium text-foreground/90">
-                  Sravya Speech & Hearing Clinic operates across 3 convenient locations in Thrissur district - Valapad, Kodungallore, and Thrissur - serving families and patients across the region.
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4 font-medium text-foreground/90">
+                  OUR MOTTO — AFFORDABLE CARE, UNCOMPROMISED QUALITY
                 </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  SRAVYA SPEECH AND HEARING CLINIC operates across 3 convenient locations in Thrissur district:
+                </p>
+                <ul className="text-lg text-muted-foreground leading-relaxed mb-6 space-y-1">
+                  <li>• VALAPAD (Kothakulam)</li>
+                  <li>• KODUNGALLORE (Thiruvanchikulam)</li>
+                  <li>• THRISSUR (East Fort)</li>
+                </ul>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Our team of experienced audiologists and speech therapists use modern diagnostic tools and evidence-based treatment approaches to help you or your loved ones achieve better communication and hearing health.
+                  Our team of experienced audiologists, speech pathologists, clinical psychologists, special educators use modern diagnostic tools and evidence-based treatment approaches to help you and your loved ones achieve better communication and hearing health.
                 </p>
               </motion.div>
 
@@ -219,8 +212,11 @@ const HomePage = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {services.map((service, index) => <ServiceCard key={index} {...service} index={index} />)}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              {services.slice(0, 3).map((service, index) => <ServiceCard key={index} {...service} index={index} />)}
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {services.slice(3, 5).map((service, index) => <ServiceCard key={index + 3} {...service} index={index + 3} />)}
             </div>
           </div>
         </section>
