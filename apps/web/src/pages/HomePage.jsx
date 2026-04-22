@@ -15,24 +15,27 @@ const HomePage = () => {
   const clinicLocations = [{
     id: 'valapad',
     name: 'Valapad Clinic',
-    address: 'Valapad, Thrissur, Kerala',
+    address: 'Kothakulam Stop, Valapad, Thrissur, Kerala 680567',
     phone: '+91 88483 20580',
     whatsapp: '918848320580',
-    mapUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=76.05%2C10.35%2C76.15%2C10.45&layer=mapnik&marker=10.40,76.10'
+    embedUrl: 'https://maps.google.com/maps?q=10.395702729757742,76.1173561576197&output=embed&z=15',
+    googleMapsUrl: 'https://maps.app.goo.gl/cNVoijXZDoNjGL618'
   }, {
     id: 'kodungallore',
     name: 'Kodungallore Clinic',
-    address: 'Kodungallore, Thrissur, Kerala',
+    address: 'Thiruvanchikulam, Kodungallore, Thrissur, Kerala 680664',
     phone: '+91 88483 20580',
     whatsapp: '918848320580',
-    mapUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=76.15%2C10.15%2C76.25%2C10.25&layer=mapnik&marker=10.22,76.20'
+    embedUrl: 'https://maps.google.com/maps?q=10.208988061822383, 76.20428566385107&output=embed&z=15',
+    googleMapsUrl: 'https://maps.app.goo.gl/YUmq4N4t3Nu7U1Lw8'
   }, {
     id: 'thrissur',
     name: 'Thrissur City Clinic',
-    address: 'Thrissur City, Kerala',
+    address: 'Kizhakkumpattukara, East Fort, Thrissur, Kerala',
     phone: '+91 88483 20580',
     whatsapp: '918848320580',
-    mapUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=76.15%2C10.45%2C76.25%2C10.55&layer=mapnik&marker=10.52,76.21'
+    embedUrl: 'https://maps.google.com/maps?q=10.52,76.21&output=embed&z=15',
+    googleMapsUrl: 'https://maps.google.com/?q=10.52,76.21'
   }];
   const services = [{
     icon: Ear,
@@ -327,12 +330,17 @@ const HomePage = () => {
               duration: 0.5,
               delay: index * 0.1
             }} className="bg-card rounded-2xl overflow-hidden shadow-soft border-t-4 border-t-primary border-x border-b border-border hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
-                  <div className="h-48 w-full bg-muted relative">
-                    <iframe src={location.mapUrl} width="100%" height="100%" style={{
+                  <a href={location.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="h-48 w-full bg-muted relative block group/map">
+                    <iframe src={location.embedUrl} width="100%" height="100%" style={{
                   border: 0,
                   pointerEvents: 'none'
                 }} loading="lazy" title={`Map of ${location.name}`} className="absolute inset-0"></iframe>
-                  </div>
+                    <div className="absolute inset-0 bg-black/0 group-hover/map:bg-black/20 transition-colors duration-200 flex items-center justify-center">
+                      <span className="opacity-0 group-hover/map:opacity-100 transition-opacity duration-200 bg-white text-foreground text-xs font-medium px-3 py-1.5 rounded-full shadow flex items-center gap-1.5">
+                        <ExternalLink className="w-3 h-3" /> View on Google Maps
+                      </span>
+                    </div>
+                  </a>
                   <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-semibold mb-3 text-foreground">{location.name}</h3>
                     <div className="flex items-start gap-3 mb-4 text-muted-foreground">

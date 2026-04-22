@@ -59,7 +59,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-medium">Valapad Clinic</p>
-                  <p className="text-sm text-secondary-foreground/80 mb-1">Kothakulam Stop, PO, Valapad, Thrissur, Kerala 680567</p>
+                  <a href="https://maps.app.goo.gl/cNVoijXZDoNjGL618" target="_blank" rel="noopener noreferrer" className="text-sm text-secondary-foreground/80 hover:text-primary hover:underline transition-colors duration-200 mb-1 block">Kothakulam Stop, PO, Valapad, Thrissur, Kerala 680567</a>
                   <a href="tel:+918848320580" className="text-sm text-primary hover:underline">+91 88483 20580</a>
                 </div>
               </div>
@@ -67,7 +67,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-medium">Kodungallore Clinic</p>
-                  <p className="text-sm text-secondary-foreground/80 mb-1">Thiruvanchikulam, Kodungallore, Thrissur, Kerala 680664</p>
+                  <a href="https://maps.app.goo.gl/YUmq4N4t3Nu7U1Lw8" target="_blank" rel="noopener noreferrer" className="text-sm text-secondary-foreground/80 hover:text-primary hover:underline transition-colors duration-200 mb-1 block">Thiruvanchikulam, Kodungallore, Thrissur, Kerala 680664</a>
                   <a href="tel:+918848320580" className="text-sm text-primary hover:underline">+91 88483 20580</a>
                 </div>
               </div>
@@ -75,7 +75,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-medium">Thrissur Clinic</p>
-                  <p className="text-sm text-secondary-foreground/80 mb-1">Kizhakkumpattukara, East Fort-5</p>
+                  <a href="https://maps.google.com/?q=10.52,76.21" target="_blank" rel="noopener noreferrer" className="text-sm text-secondary-foreground/80 hover:text-primary hover:underline transition-colors duration-200 mb-1 block">Kizhakkumpattukara, East Fort-5</a>
                   <a href="tel:+918848320580" className="text-sm text-primary hover:underline">+91 88483 20580</a>
                 </div>
               </div>
